@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCX Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #image-container {
+            width: 100%;
+            height: 100vh;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #image-viewer {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #download-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="image-viewer" src="CAS1.pdf" alt="Word Viewer" draggable="false">
+        <div id="download-message">You can't download or drag this Word.</div>
+    </div>
+
+    <script>
+        const imageViewer = document.getElementById('image-viewer');
+        const downloadMessage = document.getElementById('download-message');
+
+        // Display custom message on right-click
+        imageViewer.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            const x = e.clientX;
+            const y = e.clientY;
+            downloadMessage.style.display = 'block';
+            downloadMessage.style.left = `${x}px`;
+            downloadMessage.style.top = `${y}px`;
+
+            // Hide the message after 3000 milliseconds (3 seconds)
+            setTimeout(function () {
+                downloadMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
