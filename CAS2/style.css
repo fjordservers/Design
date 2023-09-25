@@ -1,0 +1,70 @@
+/* Reset some default styles */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set the font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000;
+}
+
+/* Header styles */
+header {
+    background-color: #3498db; /* Blue header background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Button-like link styles */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db; /* Blue button background */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+a.button:hover {
+    background-color: #1e77d8; /* Slightly darker blue on hover */
+    text-decoration: none;
+}

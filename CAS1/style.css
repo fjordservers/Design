@@ -7,8 +7,7 @@ body, h1, h2, ul, li {
 /* Apply a background color and set the font */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("atom.gif");
-    background-color: #f0f0f0;
+    background-color: #ff0000;
 }
 
 /* Header styles */
